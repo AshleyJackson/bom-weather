@@ -3,6 +3,10 @@ export interface HourlyForecast {
     metadata: HourlyForecastMetadata;
     data: HourlyForecastData[];
 }
+export interface ThreeHourForecast {
+    metadata: HourlyForecastMetadata;
+    data: HourlyForecastData[];
+}
 export interface HourlyForecastMetadata {
     issue_time: Date;
     response_timestamp: Date;

@@ -20,6 +20,49 @@ async function runTests(): Promise<void> {
 	const results: TestResult[] = [];
 
 	results.push(
+		await runTest('searchLocations returns data with expected structure', async () => {
+			const searchResults = await BOM.searchLocations('Sydney');
+			if (!searchResults || typeof searchResults !== 'object') {
+				throw new Error('Expected searchResults to be an object');
+			}
+			if (!('data' in searchResults)) {
+				throw new Error('Expected searchResults to have a data property');
+			}
+			if (!Array.isArray(searchResults.data)) {
+				throw new Error('Expected searchResults.data to be an array');
+			}
+		})
+	);
+
+	results.push(
+		await runTest('searchLocations throws error for short query', async () => {
+			try {
+				await BOM.searchLocations('ab');
+				throw new Error('Expected an error to be thrown');
+			} catch (error) {
+				if (error instanceof Error && error.message === 'Expected an error to be thrown') {
+					throw error;
+				}
+			}
+		})
+	);
+
+	results.push(
+		await runTest('getLocationInfo returns data with expected structure', async () => {
+			const locationInfo = await BOM.getLocationInfo(Cities.SYDNEY);
+			if (!locationInfo || typeof locationInfo !== 'object') {
+				throw new Error('Expected locationInfo to be an object');
+			}
+			if (!('data' in locationInfo)) {
+				throw new Error('Expected locationInfo to have a data property');
+			}
+			if (!locationInfo.data.geohash) {
+				throw new Error('Expected locationInfo.data to have a geohash');
+			}
+		})
+	);
+
+	results.push(
 		await runTest('getObservations returns data with expected structure', async () => {
 			const observations = await BOM.getObservations(Cities.ADELAIDE);
 			if (!observations || typeof observations !== 'object') {
@@ -63,6 +106,36 @@ async function runTests(): Promise<void> {
 			}
 			if (!('data' in hourlyForecast)) {
 				throw new Error('Expected hourlyForecast to have a data property');
+			}
+		})
+	);
+
+	results.push(
+		await runTest('getThreeHourForecast returns data with expected structure', async () => {
+			const threeHourForecast = await BOM.getThreeHourForecast(Cities.HOBART);
+			if (!threeHourForecast || typeof threeHourForecast !== 'object') {
+				throw new Error('Expected threeHourForecast to be an object');
+			}
+			if (!('data' in threeHourForecast)) {
+				throw new Error('Expected threeHourForecast to have a data property');
+			}
+			if (threeHourForecast.data.length > 3) {
+				throw new Error('Expected threeHourForecast to have at most 3 data entries');
+			}
+		})
+	);
+
+	results.push(
+		await runTest('getRainForecast returns data with expected structure', async () => {
+			const rainForecast = await BOM.getRainForecast(Cities.MELBOURNE);
+			if (!rainForecast || typeof rainForecast !== 'object') {
+				throw new Error('Expected rainForecast to be an object');
+			}
+			if (!('data' in rainForecast)) {
+				throw new Error('Expected rainForecast to have a data property');
+			}
+			if (!('metadata' in rainForecast)) {
+				throw new Error('Expected rainForecast to have a metadata property');
 			}
 		})
 	);
