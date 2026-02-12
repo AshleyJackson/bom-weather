@@ -7,9 +7,9 @@ dist
 /node_modules
 /.pnp
 .pnp.js
-.yarn/cache
-.yarn/install-state.gz
-.yarn/build-state.yml
+.yarn/
+.yarnrc.yml
+yarn.lock
 
 # testing
 coverage

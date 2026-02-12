@@ -1,8 +1,0 @@
-{
-    "extends": "@sapphire/ts-config",
-    "compilerOptions": {
-        "importHelpers": true,
-        "noEmitHelpers": true,
-        "skipLibCheck": true
-    }
-}
