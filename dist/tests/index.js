@@ -120,7 +120,7 @@ async function runTests() {
         }
     }));
     results.push(await runTest('getRadarImage returns a Buffer with data', async () => {
-        const radarImage = await index_1.BOM.getRadarImage('IDR663');
+        const radarImage = await index_1.BOM.getRadarImage(structures_1.RadarRegions.BRISBANE_MARBURG);
         if (!radarImage || !Buffer.isBuffer(radarImage)) {
             throw new Error('Expected radarImage to be a Buffer');
         }

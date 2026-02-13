@@ -1,4 +1,4 @@
-import { Cities } from '../client/structures';
+import { Cities, RadarRegions } from '../client/structures';
 import { BOM } from '../index';
 
 interface TestResult {
@@ -155,7 +155,7 @@ async function runTests(): Promise<void> {
 
 	results.push(
 		await runTest('getRadarImage returns a Buffer with data', async () => {
-			const radarImage = await BOM.getRadarImage('IDR663');
+			const radarImage = await BOM.getRadarImage(RadarRegions.BRISBANE_MARBURG);
 			if (!radarImage || !Buffer.isBuffer(radarImage)) {
 				throw new Error('Expected radarImage to be a Buffer');
 			}

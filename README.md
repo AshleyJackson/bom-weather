@@ -57,10 +57,10 @@ await BOM.getObservations(Cities.SYDNEY);
 Get radar image GIF for Sydney (Terrey Hills)
 
 ```ts
-import { BOM } from "bom-weather";
+import { BOM, RadarRegions } from "bom-weather";
 import { writeFileSync } from "fs";
 
-const radarImage = await BOM.getRadarImage("IDR713");
+const radarImage = await BOM.getRadarImage(RadarRegions.SYDNEY_TERREY_HILLS);
 writeFileSync("radar.gif", radarImage);
 ```
 
