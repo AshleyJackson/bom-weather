@@ -14,6 +14,9 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BOMFtpError = void 0;
 __exportStar(require("./client/Client"), exports);
 __exportStar(require("./client/structures"), exports);
+var FtpFetch_1 = require("./utils/FtpFetch");
+Object.defineProperty(exports, "BOMFtpError", { enumerable: true, get: function () { return FtpFetch_1.BOMFtpError; } });
 //# sourceMappingURL=index.js.map

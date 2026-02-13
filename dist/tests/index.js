@@ -119,6 +119,26 @@ async function runTests() {
             }
         }
     }));
+    results.push(await runTest('getRadarImage returns a Buffer with data', async () => {
+        const radarImage = await index_1.BOM.getRadarImage('IDR663');
+        if (!radarImage || !Buffer.isBuffer(radarImage)) {
+            throw new Error('Expected radarImage to be a Buffer');
+        }
+        if (radarImage.length === 0) {
+            throw new Error('Expected radarImage to have data');
+        }
+    }));
+    results.push(await runTest('getRadarImage throws error for invalid region code', async () => {
+        try {
+            await index_1.BOM.getRadarImage('INVALID_CODE_THAT_DOES_NOT_EXIST_999');
+            throw new Error('Expected an error to be thrown');
+        }
+        catch (error) {
+            if (error instanceof Error && error.message === 'Expected an error to be thrown') {
+                throw error;
+            }
+        }
+    }));
     console.log('\n=== Test Results ===\n');
     let passed = 0;
     let failed = 0;

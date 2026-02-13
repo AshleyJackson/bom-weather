@@ -1,4 +1,5 @@
 import { Fetch, BOMApiError } from '../utils/Fetch';
+import { FtpFetch, BOMFtpError } from '../utils/FtpFetch';
 import type {
 	DailyForecast,
 	HourlyForecast,
@@ -181,6 +182,22 @@ export class BOM {
 				throw new BOMApiError(`Failed to get rain forecast for geohash "${geohash}": ${error.message}`, error.statusCode, error.statusText);
 			}
 			throw error;
+		}
+	}
+
+	/**
+	 * Get the radar image for a region from BOM FTP server
+	 * @param {string} regionCode The radar region code (e.g., 'IDR663')
+	 * @returns {Buffer} A Buffer containing the radar GIF image
+	 */
+	public static async getRadarImage(regionCode: string): Promise<Buffer> {
+		try {
+			return await FtpFetch.getRadarGif(regionCode);
+		} catch (error) {
+			if (error instanceof BOMFtpError) {
+				throw error;
+			}
+			throw new BOMFtpError(`Failed to get radar image for region "${regionCode}": ${String(error)}`);
 		}
 	}
 }
