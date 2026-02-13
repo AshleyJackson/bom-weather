@@ -39,6 +39,9 @@ BOM.getThreeHourForecast("GEOHASH");
 
 // Current Rain Forecast (if available)
 BOM.getRainForecast("GEOHASH");
+
+// Get radar image GIF for a region
+BOM.getRadarImage("REGION_CODE"); // e.g., 'IDR663'
 ```
 
 ### Examples
@@ -49,6 +52,16 @@ Find the current weather observations for Sydney
 import { BOM, Cities } from "bom-weather";
 
 await BOM.getObservations(Cities.SYDNEY);
+```
+
+Get radar image GIF for Sydney (Terrey Hills)
+
+```ts
+import { BOM } from "bom-weather";
+import { writeFileSync } from "fs";
+
+const radarImage = await BOM.getRadarImage("IDR713");
+writeFileSync("radar.gif", radarImage);
 ```
 
 ## Disclaimer
