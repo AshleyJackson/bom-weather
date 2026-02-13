@@ -57,5 +57,11 @@ export declare class BOM {
      * @returns {RainForecast} A `RainForecast` object
      */
     static getRainForecast(geohash: string): Promise<RainForecast>;
+    /**
+     * Get the radar image for a region from BOM FTP server
+     * @param {string} regionCode The radar region code (e.g., 'IDR663')
+     * @returns {Buffer} A Buffer containing the radar GIF image
+     */
+    static getRadarImage(regionCode: string): Promise<Buffer>;
 }
 //# sourceMappingURL=Client.d.ts.map

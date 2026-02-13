@@ -1,4 +1,4 @@
-import { Cities } from '../client/structures';
+import { Cities, RadarRegions } from '../client/structures';
 import { BOM } from '../index';
 
 interface TestResult {
@@ -144,6 +144,31 @@ async function runTests(): Promise<void> {
 		await runTest('getObservations throws error for invalid geohash', async () => {
 			try {
 				await BOM.getObservations('invalid_geohash');
+				throw new Error('Expected an error to be thrown');
+			} catch (error) {
+				if (error instanceof Error && error.message === 'Expected an error to be thrown') {
+					throw error;
+				}
+			}
+		})
+	);
+
+	results.push(
+		await runTest('getRadarImage returns a Buffer with data', async () => {
+			const radarImage = await BOM.getRadarImage(RadarRegions.QLD_BRISBANE_MT_STAPYLTON);
+			if (!radarImage || !Buffer.isBuffer(radarImage)) {
+				throw new Error('Expected radarImage to be a Buffer');
+			}
+			if (radarImage.length === 0) {
+				throw new Error('Expected radarImage to have data');
+			}
+		})
+	);
+
+	results.push(
+		await runTest('getRadarImage throws error for invalid region code', async () => {
+			try {
+				await BOM.getRadarImage('INVALID_CODE_THAT_DOES_NOT_EXIST_999');
 				throw new Error('Expected an error to be thrown');
 			} catch (error) {
 				if (error instanceof Error && error.message === 'Expected an error to be thrown') {

@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BOM = void 0;
 const Fetch_1 = require("../utils/Fetch");
+const FtpFetch_1 = require("../utils/FtpFetch");
 /**
  * A static class with all BOM API endpoints
  */
@@ -173,6 +174,22 @@ class BOM {
                 throw new Fetch_1.BOMApiError(`Failed to get rain forecast for geohash "${geohash}": ${error.message}`, error.statusCode, error.statusText);
             }
             throw error;
+        }
+    }
+    /**
+     * Get the radar image for a region from BOM FTP server
+     * @param {string} regionCode The radar region code (e.g., 'IDR663')
+     * @returns {Buffer} A Buffer containing the radar GIF image
+     */
+    static async getRadarImage(regionCode) {
+        try {
+            return await FtpFetch_1.FtpFetch.getRadarGif(regionCode);
+        }
+        catch (error) {
+            if (error instanceof FtpFetch_1.BOMFtpError) {
+                throw error;
+            }
+            throw new FtpFetch_1.BOMFtpError(`Failed to get radar image for region "${regionCode}": ${String(error)}`);
         }
     }
 }

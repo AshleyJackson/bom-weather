@@ -1,4 +1,4 @@
-/* Version: 1.1.9 - February 13, 2026 07:22:11 */
+/* Version: 1.1.9 - February 13, 2026 23:51:04 */
 'use strict';
 
 var __createBinding = (undefined && undefined.__createBinding) || (Object.create ? (function(o, m, k, k2) {
@@ -16,5 +16,8 @@ var __exportStar = (undefined && undefined.__exportStar) || function(m, exports$
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports$1, p)) __createBinding(exports$1, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BOMFtpError = void 0;
 __exportStar(require("./client/Client"), exports);
 __exportStar(require("./client/structures"), exports);
+var FtpFetch_1 = require("./utils/FtpFetch");
+Object.defineProperty(exports, "BOMFtpError", { enumerable: true, get: function () { return FtpFetch_1.BOMFtpError; } });

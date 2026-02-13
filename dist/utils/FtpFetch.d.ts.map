@@ -1,0 +1,1 @@
+{"version":3,"file":"FtpFetch.d.ts","sourceRoot":"","sources":["../../src/utils/FtpFetch.ts"],"names":[],"mappings":"AAGA,qBAAa,WAAY,SAAQ,KAAK;gBACzB,OAAO,EAAE,MAAM;CAI3B;AAGD,qBAAa,QAAQ;IACpB,OAAO,CAAC,MAAM,CAAC,OAAO,CAAoB;IAC1C,OAAO,CAAC,MAAM,CAAC,WAAW,CAAqB;WAE3B,WAAW,CAAC,UAAU,EAAE,MAAM,GAAG,OAAO,CAAC,MAAM,CAAC;CAoCpE"}
