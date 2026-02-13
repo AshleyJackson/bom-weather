@@ -74,41 +74,41 @@ export declare enum RadarRegions {
     TAS_WEST_TAKONE = "IDR523",
     /** @deprecated Use NSW_SYDNEY_TERREY_HILLS instead */
     SYDNEY_TERREY_HILLS = "IDR713",
-    /** @deprecated Use NSW_WOLLONGONG_APPIN instead */
-    SYDNEY_WOLLONGONG = "IDR033",
+    /** @deprecated Use NSW_WOLLONGONG_APPIN instead. Note: Original code was IDR712 (Wollongong 256km) */
+    SYDNEY_WOLLONGONG = "IDR712",
     /** @deprecated Use VIC_MELBOURNE instead */
     MELBOURNE = "IDR023",
-    /** @deprecated Use QLD_BRISBANE_MT_STAPYLTON instead */
+    /** @deprecated Use QLD_BRISBANE_MT_STAPYLTON or QLD_BRISBANE_MARBURG instead */
     BRISBANE_MARBURG = "IDR663",
     /** @deprecated Use SA_ADELAIDE_BUCKLAND_PARK instead */
     ADELAIDE_BUCKLAND_PARK = "IDR643",
-    /** @deprecated Use SA_WOOMERA instead (corrected code) */
-    ADELAIDE_WOOMERA = "IDR273",
+    /** @deprecated Use SA_CEDUNA instead. Note: Original code was IDR333 (Ceduna), not Woomera */
+    ADELAIDE_WOOMERA = "IDR333",
     /** @deprecated Use WA_PERTH_SERPENTINE instead */
     PERTH = "IDR703",
     /** @deprecated Use NT_DARWIN_BERRIMAH instead */
     DARWIN_BERRIMAH = "IDR633",
     /** @deprecated Use NSW_CANBERRA_CAPTAINS_FLAT instead */
     CANBERRA_CAPTAINS_FLAT = "IDR403",
-    /** @deprecated Use TAS_HOBART_MT_KOONYA instead */
-    HOBART = "IDR763",
+    /** @deprecated Use TAS_HOBART_MT_KOONYA instead. Note: Original code was IDR423 (Katherine, NT) */
+    HOBART = "IDR423",
     /** @deprecated Use NSW_NEWCASTLE instead */
-    NEWCASTLE = "IDR043",
+    NEWCASTLE = "IDR033",
     /** @deprecated Use WA_NEWDEGATE instead */
     NEWDEGATE = "IDR313",
-    /** @deprecated Use QLD_CAIRNS instead */
-    CAIRNS = "IDR193",
-    /** @deprecated Use QLD_TOWNSVILLE instead */
-    TOWNSVILLE = "IDR1063",
-    /** @deprecated Use QLD_GLADSTONE instead */
-    GLADSTONE = "IDR233",
+    /** @deprecated Use QLD_CAIRNS instead. Note: Original code was IDR303 (incorrect) */
+    CAIRNS = "IDR303",
+    /** @deprecated Use QLD_TOWNSVILLE instead. Note: Original code was IDR733 (incorrect) */
+    TOWNSVILLE = "IDR733",
+    /** @deprecated Use QLD_GLADSTONE instead. Note: Original code was IDR363 (incorrect, Gulf of Carpentaria) */
+    GLADSTONE = "IDR363",
     /** @deprecated Use NSW_GRAFTON instead */
-    GRAFTON = "IDR283",
+    GRAFTON = "IDR043",
     /** @deprecated Use WA_PORT_HEDLAND instead */
     PORT_HEDLAND = "IDR323",
-    /** @deprecated Use WA_BROOME instead */
-    BROOME = "IDR173",
-    /** @deprecated Use NT_ALICE_SPRINGS instead */
-    ALICE_SPRINGS = "IDR253"
+    /** @deprecated Use WA_BROOME instead. Note: Original code was IDR293 (incorrect, Learmonth) */
+    BROOME = "IDR293",
+    /** @deprecated Use NT_ALICE_SPRINGS instead. Note: Original code was IDR393 (incorrect, Halls Creek) */
+    ALICE_SPRINGS = "IDR393"
 }
 //# sourceMappingURL=enums.d.ts.map

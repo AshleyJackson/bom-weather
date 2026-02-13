@@ -84,44 +84,44 @@ var RadarRegions;
     // Tasmania
     RadarRegions["TAS_HOBART_MT_KOONYA"] = "IDR763";
     RadarRegions["TAS_WEST_TAKONE"] = "IDR523";
-    // Legacy aliases for backward compatibility
+    // Legacy aliases for backward compatibility (maintain original codes even if incorrect)
     /** @deprecated Use NSW_SYDNEY_TERREY_HILLS instead */
     RadarRegions["SYDNEY_TERREY_HILLS"] = "IDR713";
-    /** @deprecated Use NSW_WOLLONGONG_APPIN instead */
-    RadarRegions["SYDNEY_WOLLONGONG"] = "IDR033";
+    /** @deprecated Use NSW_WOLLONGONG_APPIN instead. Note: Original code was IDR712 (Wollongong 256km) */
+    RadarRegions["SYDNEY_WOLLONGONG"] = "IDR712";
     /** @deprecated Use VIC_MELBOURNE instead */
     RadarRegions["MELBOURNE"] = "IDR023";
-    /** @deprecated Use QLD_BRISBANE_MT_STAPYLTON instead */
+    /** @deprecated Use QLD_BRISBANE_MT_STAPYLTON or QLD_BRISBANE_MARBURG instead */
     RadarRegions["BRISBANE_MARBURG"] = "IDR663";
     /** @deprecated Use SA_ADELAIDE_BUCKLAND_PARK instead */
     RadarRegions["ADELAIDE_BUCKLAND_PARK"] = "IDR643";
-    /** @deprecated Use SA_WOOMERA instead (corrected code) */
-    RadarRegions["ADELAIDE_WOOMERA"] = "IDR273";
+    /** @deprecated Use SA_CEDUNA instead. Note: Original code was IDR333 (Ceduna), not Woomera */
+    RadarRegions["ADELAIDE_WOOMERA"] = "IDR333";
     /** @deprecated Use WA_PERTH_SERPENTINE instead */
     RadarRegions["PERTH"] = "IDR703";
     /** @deprecated Use NT_DARWIN_BERRIMAH instead */
     RadarRegions["DARWIN_BERRIMAH"] = "IDR633";
     /** @deprecated Use NSW_CANBERRA_CAPTAINS_FLAT instead */
     RadarRegions["CANBERRA_CAPTAINS_FLAT"] = "IDR403";
-    /** @deprecated Use TAS_HOBART_MT_KOONYA instead */
-    RadarRegions["HOBART"] = "IDR763";
+    /** @deprecated Use TAS_HOBART_MT_KOONYA instead. Note: Original code was IDR423 (Katherine, NT) */
+    RadarRegions["HOBART"] = "IDR423";
     /** @deprecated Use NSW_NEWCASTLE instead */
-    RadarRegions["NEWCASTLE"] = "IDR043";
+    RadarRegions["NEWCASTLE"] = "IDR033";
     /** @deprecated Use WA_NEWDEGATE instead */
     RadarRegions["NEWDEGATE"] = "IDR313";
-    /** @deprecated Use QLD_CAIRNS instead */
-    RadarRegions["CAIRNS"] = "IDR193";
-    /** @deprecated Use QLD_TOWNSVILLE instead */
-    RadarRegions["TOWNSVILLE"] = "IDR1063";
-    /** @deprecated Use QLD_GLADSTONE instead */
-    RadarRegions["GLADSTONE"] = "IDR233";
+    /** @deprecated Use QLD_CAIRNS instead. Note: Original code was IDR303 (incorrect) */
+    RadarRegions["CAIRNS"] = "IDR303";
+    /** @deprecated Use QLD_TOWNSVILLE instead. Note: Original code was IDR733 (incorrect) */
+    RadarRegions["TOWNSVILLE"] = "IDR733";
+    /** @deprecated Use QLD_GLADSTONE instead. Note: Original code was IDR363 (incorrect, Gulf of Carpentaria) */
+    RadarRegions["GLADSTONE"] = "IDR363";
     /** @deprecated Use NSW_GRAFTON instead */
-    RadarRegions["GRAFTON"] = "IDR283";
+    RadarRegions["GRAFTON"] = "IDR043";
     /** @deprecated Use WA_PORT_HEDLAND instead */
     RadarRegions["PORT_HEDLAND"] = "IDR323";
-    /** @deprecated Use WA_BROOME instead */
-    RadarRegions["BROOME"] = "IDR173";
-    /** @deprecated Use NT_ALICE_SPRINGS instead */
-    RadarRegions["ALICE_SPRINGS"] = "IDR253";
+    /** @deprecated Use WA_BROOME instead. Note: Original code was IDR293 (incorrect, Learmonth) */
+    RadarRegions["BROOME"] = "IDR293";
+    /** @deprecated Use NT_ALICE_SPRINGS instead. Note: Original code was IDR393 (incorrect, Halls Creek) */
+    RadarRegions["ALICE_SPRINGS"] = "IDR393";
 })(RadarRegions || (exports.RadarRegions = RadarRegions = {}));
 //# sourceMappingURL=enums.js.map
