@@ -39,7 +39,7 @@ var RadarRegions;
     RadarRegions["TOWNSVILLE"] = "IDR733";
     RadarRegions["GLADSTONE"] = "IDR363";
     RadarRegions["GRAFTON"] = "IDR043";
-    RadarRegions["PORT_HEDLAND"] = "IDR313";
+    RadarRegions["PORT_HEDLAND"] = "IDR323";
     RadarRegions["BROOME"] = "IDR293";
     RadarRegions["ALICE_SPRINGS"] = "IDR393";
 })(RadarRegions || (exports.RadarRegions = RadarRegions = {}));

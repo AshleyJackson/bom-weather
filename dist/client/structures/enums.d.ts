@@ -25,7 +25,7 @@ export declare enum RadarRegions {
     TOWNSVILLE = "IDR733",
     GLADSTONE = "IDR363",
     GRAFTON = "IDR043",
-    PORT_HEDLAND = "IDR313",
+    PORT_HEDLAND = "IDR323",
     BROOME = "IDR293",
     ALICE_SPRINGS = "IDR393"
 }
