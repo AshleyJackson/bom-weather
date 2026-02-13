@@ -77,7 +77,9 @@ The `RadarRegions` enum includes comprehensive coverage of all BOM radar station
 - **Northern Territory**: 5 radars including Darwin, Alice Springs, Gove, Katherine, and Warruwi
 - **Tasmania**: 2 radars including Hobart and West Takone
 
-For backward compatibility, legacy radar names (e.g., `SYDNEY_TERREY_HILLS`, `MELBOURNE`) are still available but deprecated in favor of state-prefixed names (e.g., `NSW_SYDNEY_TERREY_HILLS`, `VIC_MELBOURNE`).
+All radar codes use state prefixes (e.g., `NSW_`, `VIC_`, `QLD_`) for clarity and easy discovery.
+
+**Note**: Legacy radar names from earlier versions have been removed as they contained incorrect radar codes. Please update your code to use the new state-prefixed names with verified codes.
 
 ## Disclaimer
 
