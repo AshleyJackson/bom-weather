@@ -9,24 +9,106 @@ export declare enum Cities {
     MELBOURNE = "r1r0fu"
 }
 export declare enum RadarRegions {
+    NSW_BREWARRINA = "IDR933",
+    NSW_CANBERRA_CAPTAINS_FLAT = "IDR403",
+    NSW_GRAFTON = "IDR283",
+    NSW_HILLSTON = "IDR943",
+    NSW_MOREE = "IDR533",
+    NSW_NAMOI_BLACKJACK_MOUNTAIN = "IDR693",
+    NSW_NEWCASTLE = "IDR043",
+    NSW_SYDNEY_TERREY_HILLS = "IDR713",
+    NSW_WAGGA_WAGGA = "IDR553",
+    NSW_WOLLONGONG_APPIN = "IDR033",
+    NSW_YEOVAL = "IDR963",
+    NSW_NORFOLK_ISLAND = "IDR623",
+    VIC_BAIRNSDALE = "IDR683",
+    VIC_MELBOURNE = "IDR023",
+    VIC_MILDURA = "IDR973",
+    VIC_RAINBOW = "IDR953",
+    VIC_YARRAWONGA = "IDR493",
+    QLD_BOWEN = "IDR243",
+    QLD_BRISBANE_MARBURG = "IDR503",
+    QLD_BRISBANE_MT_STAPYLTON = "IDR663",
+    QLD_CAIRNS = "IDR193",
+    QLD_EMERALD = "IDR723",
+    QLD_GLADSTONE = "IDR233",
+    QLD_GREENVALE = "IDR743",
+    QLD_GULF_MORNINGTON_ISLAND = "IDR363",
+    QLD_GYMPIE_MT_KANIGAN = "IDR083",
+    QLD_LONGREACH = "IDR563",
+    QLD_MACKAY = "IDR223",
+    QLD_MOUNT_ISA = "IDR753",
+    QLD_RICHMOND = "IDR1073",
+    QLD_TAROOM = "IDR983",
+    QLD_TOOWOOMBA = "IDR1083",
+    QLD_TOWNSVILLE = "IDR1063",
+    QLD_WARREGO = "IDR673",
+    QLD_WEIPA = "IDR783",
+    QLD_WILLIS_ISLAND = "IDR413",
+    SA_ADELAIDE_BUCKLAND_PARK = "IDR643",
+    SA_ADELAIDE_SELLICKS_HILL = "IDR463",
+    SA_CEDUNA = "IDR333",
+    SA_MOUNT_GAMBIER = "IDR143",
+    SA_WOOMERA = "IDR273",
+    WA_ALBANY = "IDR313",
+    WA_BROOME = "IDR173",
+    WA_CARNARVON = "IDR1143",
+    WA_DAMPIER = "IDR343",
+    WA_ESPERANCE = "IDR353",
+    WA_GERALDTON = "IDR363",
+    WA_GILES = "IDR383",
+    WA_HALLS_CREEK = "IDR393",
+    WA_KALGOORLIE = "IDR403",
+    WA_LEARMONTH = "IDR293",
+    WA_NEWDEGATE = "IDR313",
+    WA_PERTH_SERPENTINE = "IDR703",
+    WA_PORT_HEDLAND = "IDR323",
+    WA_SOUTH_DOODLAKINE = "IDR363",
+    WA_WATHEROO = "IDR373",
+    NT_ALICE_SPRINGS = "IDR253",
+    NT_DARWIN_BERRIMAH = "IDR633",
+    NT_GOVE = "IDR1123",
+    NT_KATHERINE_TINDAL = "IDR423",
+    NT_WARRUWI = "IDR773",
+    TAS_HOBART_MT_KOONYA = "IDR763",
+    TAS_WEST_TAKONE = "IDR523",
+    /** @deprecated Use NSW_SYDNEY_TERREY_HILLS instead */
     SYDNEY_TERREY_HILLS = "IDR713",
-    SYDNEY_WOLLONGONG = "IDR712",
+    /** @deprecated Use NSW_WOLLONGONG_APPIN instead */
+    SYDNEY_WOLLONGONG = "IDR033",
+    /** @deprecated Use VIC_MELBOURNE instead */
     MELBOURNE = "IDR023",
+    /** @deprecated Use QLD_BRISBANE_MT_STAPYLTON instead */
     BRISBANE_MARBURG = "IDR663",
+    /** @deprecated Use SA_ADELAIDE_BUCKLAND_PARK instead */
     ADELAIDE_BUCKLAND_PARK = "IDR643",
-    ADELAIDE_WOOMERA = "IDR333",
+    /** @deprecated Use SA_WOOMERA instead (corrected code) */
+    ADELAIDE_WOOMERA = "IDR273",
+    /** @deprecated Use WA_PERTH_SERPENTINE instead */
     PERTH = "IDR703",
+    /** @deprecated Use NT_DARWIN_BERRIMAH instead */
     DARWIN_BERRIMAH = "IDR633",
+    /** @deprecated Use NSW_CANBERRA_CAPTAINS_FLAT instead */
     CANBERRA_CAPTAINS_FLAT = "IDR403",
-    HOBART = "IDR423",
-    NEWCASTLE = "IDR033",
+    /** @deprecated Use TAS_HOBART_MT_KOONYA instead */
+    HOBART = "IDR763",
+    /** @deprecated Use NSW_NEWCASTLE instead */
+    NEWCASTLE = "IDR043",
+    /** @deprecated Use WA_NEWDEGATE instead */
     NEWDEGATE = "IDR313",
-    CAIRNS = "IDR303",
-    TOWNSVILLE = "IDR733",
-    GLADSTONE = "IDR363",
-    GRAFTON = "IDR043",
+    /** @deprecated Use QLD_CAIRNS instead */
+    CAIRNS = "IDR193",
+    /** @deprecated Use QLD_TOWNSVILLE instead */
+    TOWNSVILLE = "IDR1063",
+    /** @deprecated Use QLD_GLADSTONE instead */
+    GLADSTONE = "IDR233",
+    /** @deprecated Use NSW_GRAFTON instead */
+    GRAFTON = "IDR283",
+    /** @deprecated Use WA_PORT_HEDLAND instead */
     PORT_HEDLAND = "IDR323",
-    BROOME = "IDR293",
-    ALICE_SPRINGS = "IDR393"
+    /** @deprecated Use WA_BROOME instead */
+    BROOME = "IDR173",
+    /** @deprecated Use NT_ALICE_SPRINGS instead */
+    ALICE_SPRINGS = "IDR253"
 }
 //# sourceMappingURL=enums.d.ts.map

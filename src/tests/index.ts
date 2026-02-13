@@ -155,7 +155,7 @@ async function runTests(): Promise<void> {
 
 	results.push(
 		await runTest('getRadarImage returns a Buffer with data', async () => {
-			const radarImage = await BOM.getRadarImage(RadarRegions.BRISBANE_MARBURG);
+			const radarImage = await BOM.getRadarImage(RadarRegions.QLD_BRISBANE_MT_STAPYLTON);
 			if (!radarImage || !Buffer.isBuffer(radarImage)) {
 				throw new Error('Expected radarImage to be a Buffer');
 			}

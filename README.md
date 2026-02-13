@@ -64,18 +64,20 @@ Get radar image GIF for Sydney (Terrey Hills)
 import { BOM, RadarRegions } from "bom-weather";
 import { writeFileSync } from "fs";
 
-const radarImage = await BOM.getRadarImage(RadarRegions.SYDNEY_TERREY_HILLS);
+const radarImage = await BOM.getRadarImage(RadarRegions.NSW_SYDNEY_TERREY_HILLS);
 writeFileSync("radar.gif", radarImage);
 ```
 
-Available radar regions include:
-- `SYDNEY_TERREY_HILLS`, `SYDNEY_WOLLONGONG`
-- `MELBOURNE`, `BRISBANE_MARBURG`
-- `ADELAIDE_BUCKLAND_PARK`, `ADELAIDE_WOOMERA`
-- `PERTH`, `DARWIN_BERRIMAH`
-- `CANBERRA_CAPTAINS_FLAT`, `HOBART`
-- `NEWCASTLE`, `CAIRNS`, `TOWNSVILLE`, `GLADSTONE`, `GRAFTON`
-- `NEWDEGATE`, `PORT_HEDLAND`, `BROOME`, `ALICE_SPRINGS`
+The `RadarRegions` enum includes comprehensive coverage of all BOM radar stations organized by state:
+- **NSW/ACT**: 12 radars including Sydney, Newcastle, Canberra, Wollongong, and more
+- **Victoria**: 5 radars including Melbourne, Mildura, Bairnsdale, Yarrawonga, and Rainbow
+- **Queensland**: 17 radars including Brisbane, Cairns, Townsville, Mackay, and more
+- **South Australia**: 5 radars including Adelaide, Ceduna, Woomera, and Mount Gambier
+- **Western Australia**: 13 radars including Perth, Broome, Albany, Carnarvon, and more
+- **Northern Territory**: 5 radars including Darwin, Alice Springs, Gove, Katherine, and Warruwi
+- **Tasmania**: 2 radars including Hobart and West Takone
+
+For backward compatibility, legacy radar names (e.g., `SYDNEY_TERREY_HILLS`, `MELBOURNE`) are still available but deprecated in favor of state-prefixed names (e.g., `NSW_SYDNEY_TERREY_HILLS`, `VIC_MELBOURNE`).
 
 ## Disclaimer
 
