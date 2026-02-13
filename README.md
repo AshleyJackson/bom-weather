@@ -10,7 +10,11 @@ All access to the API endpoints is done off the `BOM` class
 import { BOM } from "bom-weather";
 ```
 
-All methods are static, and can be accessed without constructing the class. To access an endpoint, all methods require a 6-digit [Geohash](https://en.wikipedia.org/wiki/Geohash) for the city to receive data for. Enums have been included for Geohashes of all the major cities of Australia. The current available endpoints are as follows
+All methods are static, and can be accessed without constructing the class. To access an endpoint, all methods require a 6-digit [Geohash](https://en.wikipedia.org/wiki/Geohash) for the city to receive data for. Enums have been included for Geohashes of all the major cities of Australia.
+
+For radar images, a `RadarRegions` enum is also provided with common BOM radar region codes.
+
+The current available endpoints are as follows
 
 ```ts
 // Search for locations by name (returns geohashes)
@@ -63,6 +67,15 @@ import { writeFileSync } from "fs";
 const radarImage = await BOM.getRadarImage(RadarRegions.SYDNEY_TERREY_HILLS);
 writeFileSync("radar.gif", radarImage);
 ```
+
+Available radar regions include:
+- `SYDNEY_TERREY_HILLS`, `SYDNEY_WOLLONGONG`
+- `MELBOURNE`, `BRISBANE_MARBURG`
+- `ADELAIDE_BUCKLAND_PARK`, `ADELAIDE_WOOMERA`
+- `PERTH`, `DARWIN_BERRIMAH`
+- `CANBERRA_CAPTAINS_FLAT`, `HOBART`
+- `NEWCASTLE`, `CAIRNS`, `TOWNSVILLE`, `GLADSTONE`, `GRAFTON`
+- `NEWDEGATE`, `PORT_HEDLAND`, `BROOME`, `ALICE_SPRINGS`
 
 ## Disclaimer
 
