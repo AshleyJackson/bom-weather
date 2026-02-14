@@ -29,7 +29,7 @@
 	"scripts": {
 		"lint": "eslint src --ext ts --fix",
 		"test": "tsc && bun dist/tests/index.js",
-		"build": "tsc && rollup -c scripts/rollup.bundle.ts && gen-esm-wrapper dist/index.js dist/index.mjs",
+		"build": "tsc && rollup -c scripts/rollup.bundle.js && gen-esm-wrapper dist/index.js dist/index.mjs",
 		"prepublishOnly": "bun run build",
 		"commit": "git-cz"
 	},
