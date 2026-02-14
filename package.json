@@ -29,7 +29,7 @@
 	"scripts": {
 		"lint": "eslint src --ext ts --fix",
 		"test": "tsc && bun dist/tests/index.js",
-		"build": "tsc && rollup -c scripts/rollup.bundle.js && gen-esm-wrapper dist/index.js dist/index.mjs",
+		"build": "tsc && bun build src/index.ts --outfile dist/index.mjs --format esm --target node --packages external",
 		"prepublishOnly": "bun run build",
 		"commit": "git-cz"
 	},
@@ -40,11 +40,8 @@
 		"eslint": "^9.0.0",
 		"eslint-config-prettier": "^10.0.0",
 		"eslint-plugin-prettier": "^5.0.0",
-		"gen-esm-wrapper": "^1.1.3",
 		"lint-staged": "^15.0.0",
 		"prettier": "^3.0.0",
-		"rollup": "^4.0.0",
-		"rollup-plugin-version-injector": "^1.3.3",
 		"typescript": "^5.9.3"
 	},
 	"lint-staged": {

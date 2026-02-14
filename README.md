@@ -5,7 +5,7 @@ A simple package to receive data from the [Australian Bureau of Meteorology](htt
 ## Installation
 
 ```bash
-npm install bomweather
+bun add bomweather
 ```
 
 ## How to Use
@@ -92,7 +92,7 @@ All radar codes use state prefixes (e.g., `NSW_`, `VIC_`, `QLD_`) for clarity an
 This package is automatically published to npm when changes are pushed to the `main` branch. The CI/CD workflow:
 
 1. Runs linting checks
-2. Runs tests across Node.js versions 18, 20, and 22
+2. Runs tests
 3. Builds the package and validates the output
 4. Tests package installation
 5. Reads the version from `package.json`
