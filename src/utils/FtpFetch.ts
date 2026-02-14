@@ -8,7 +8,7 @@ export class BOMFtpError extends Error {
 	}
 }
 
-/* eslint-disable @typescript-eslint/no-extraneous-class */
+ 
 export class FtpFetch {
 	private static ftpHost = 'ftp.bom.gov.au';
 	private static ftpBasePath = '/anon/gen/radar';

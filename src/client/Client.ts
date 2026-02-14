@@ -15,7 +15,7 @@ import type {
 /**
  * A static class with all BOM API endpoints
  */
-// eslint-disable-next-line @typescript-eslint/no-extraneous-class
+ 
 export class BOM {
 	/**
 	 * Search for locations by name
