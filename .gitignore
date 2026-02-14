@@ -10,6 +10,9 @@
 .yarnrc.yml
 yarn.lock
 
+# build output
+/dist
+
 # testing
 coverage
 
