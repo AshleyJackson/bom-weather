@@ -87,6 +87,22 @@ All radar codes use state prefixes (e.g., `NSW_`, `VIC_`, `QLD_`) for clarity an
 
 **Note**: Legacy radar names from earlier versions have been removed as they contained incorrect radar codes. Please update your code to use the new state-prefixed names with verified codes.
 
+## Publishing
+
+This package is automatically published to npm when changes are pushed to the `main` branch. The publish workflow:
+
+1. Reads the version from `package.json`
+2. Creates a Git tag (e.g., `v1.1.9`) and GitHub release
+3. Publishes to npmjs with provenance using OIDC
+
+To publish a new version:
+
+1. Update the version in `package.json` (e.g., `1.1.9` → `1.2.0`)
+2. Commit and push to `main` branch
+3. The workflow will automatically tag, release, and publish
+
+**Prerequisites**: The `NPM_TOKEN` secret must be configured in the repository settings with a valid npm access token that has publish permissions for the `bomweather` package.
+
 ## Disclaimer
 
 _Please Note: This package is meant for test purposes only. Under no circumstances is this API to be used for commercial or monetary purposes. Please contact [BOM](http://www.bom.gov.au/) directly to get access to a commercial license. All contributors on this package are in no way liable for any legal action taken against those misusing this API. By using this package you are acknowledging this disclaimer and agree to take personal responsibility to any misuse of this API_
