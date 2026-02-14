@@ -1,0 +1,46 @@
+# Source files
+src/
+scripts/
+*.ts
+*.tsx
+!*.d.ts
+
+# Config files
+tsconfig.json
+.eslintrc*
+.prettierrc*
+.editorconfig
+rollup.config.*
+
+# Build tools
+.github/
+.git/
+.gitignore
+.gitattributes
+
+# Dependencies
+node_modules/
+
+# Lock files
+package-lock.json
+yarn.lock
+bun.lock
+pnpm-lock.yaml
+
+# Tests and test data
+tests/
+*.test.*
+*.spec.*
+coverage/
+
+# Documentation
+*.md
+!README.md
+
+# Misc
+.DS_Store
+.env*
+.vscode/
+.idea/
+*.log
+*.tsbuildinfo

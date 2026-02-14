@@ -1,13 +1,19 @@
-# bom-weather
+# bomweather
 
 A simple package to receive data from the [Australian Bureau of Meteorology](http://www.bom.gov.au/) API.
+
+## Installation
+
+```bash
+npm install bomweather
+```
 
 ## How to Use
 
 All access to the API endpoints is done off the `BOM` class
 
 ```ts
-import { BOM } from "bom-weather";
+import { BOM } from "bomweather";
 ```
 
 All methods are static, and can be accessed without constructing the class. To access an endpoint, all methods require a 6-digit [Geohash](https://en.wikipedia.org/wiki/Geohash) for the city to receive data for. Enums have been included for Geohashes of all the major cities of Australia.
@@ -53,7 +59,7 @@ BOM.getRadarImage("REGION_CODE"); // e.g., 'IDR663'
 Find the current weather observations for Sydney
 
 ```ts
-import { BOM, Cities } from "bom-weather";
+import { BOM, Cities } from "bomweather";
 
 await BOM.getObservations(Cities.SYDNEY);
 ```
@@ -61,7 +67,7 @@ await BOM.getObservations(Cities.SYDNEY);
 Get radar image GIF for Sydney (Terrey Hills)
 
 ```ts
-import { BOM, RadarRegions } from "bom-weather";
+import { BOM, RadarRegions } from "bomweather";
 import { writeFileSync } from "fs";
 
 const radarImage = await BOM.getRadarImage(RadarRegions.NSW_SYDNEY_TERREY_HILLS);
