@@ -89,19 +89,23 @@ All radar codes use state prefixes (e.g., `NSW_`, `VIC_`, `QLD_`) for clarity an
 
 ## Publishing
 
-This package is automatically published to npm when changes are pushed to the `main` branch. The publish workflow:
+This package is automatically published to npm when changes are pushed to the `main` branch. The CI/CD workflow:
 
-1. Reads the version from `package.json`
-2. Creates a Git tag (e.g., `v1.1.9`) and GitHub release
-3. Publishes to npmjs with provenance using OIDC
+1. Runs linting checks
+2. Runs tests across Node.js versions 18, 20, and 22
+3. Builds the package and validates the output
+4. Tests package installation
+5. Reads the version from `package.json`
+6. Creates a Git tag (e.g., `v1.1.9`) and GitHub release
+7. Publishes to npmjs with provenance using OIDC authentication
 
 To publish a new version:
 
 1. Update the version in `package.json` (e.g., `1.1.9` → `1.2.0`)
 2. Commit and push to `main` branch
-3. The workflow will automatically tag, release, and publish
+3. The workflow will automatically lint, test, build, tag, release, and publish
 
-**Prerequisites**: The `NPM_TOKEN` secret must be configured in the repository settings with a valid npm access token that has publish permissions for the `bomweather` package.
+**Note**: The workflow uses OpenID Connect (OIDC) for authentication with npm, which is more secure than using long-lived tokens. No npm token secret is required - authentication is handled automatically through GitHub's OIDC provider.
 
 ## Disclaimer
 
