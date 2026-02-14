@@ -1,5 +1,5 @@
 {
-	"name": "bom-weather",
+	"name": "bomweather",
 	"version": "1.1.9",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
@@ -23,9 +23,9 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/AircraftOverviewer/bom-weather.git"
+		"url": "https://github.com/AshleyJackson/bom-weather.git"
 	},
-	"homepage": "https://github.com/AircraftOverviewer/bom-weather#readme",
+	"homepage": "https://github.com/AshleyJackson/bom-weather#readme",
 	"scripts": {
 		"lint": "eslint src --ext ts --fix",
 		"test": "tsc && bun dist/tests/index.js",

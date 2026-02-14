@@ -1,13 +1,19 @@
-# bom-weather
+# bomweather
 
 A simple package to receive data from the [Australian Bureau of Meteorology](http://www.bom.gov.au/) API.
+
+## Installation
+
+```bash
+npm install bomweather
+```
 
 ## How to Use
 
 All access to the API endpoints is done off the `BOM` class
 
 ```ts
-import { BOM } from "bom-weather";
+import { BOM } from "bomweather";
 ```
 
 All methods are static, and can be accessed without constructing the class. To access an endpoint, all methods require a 6-digit [Geohash](https://en.wikipedia.org/wiki/Geohash) for the city to receive data for. Enums have been included for Geohashes of all the major cities of Australia.
@@ -53,7 +59,7 @@ BOM.getRadarImage("REGION_CODE"); // e.g., 'IDR663'
 Find the current weather observations for Sydney
 
 ```ts
-import { BOM, Cities } from "bom-weather";
+import { BOM, Cities } from "bomweather";
 
 await BOM.getObservations(Cities.SYDNEY);
 ```
@@ -61,7 +67,7 @@ await BOM.getObservations(Cities.SYDNEY);
 Get radar image GIF for Sydney (Terrey Hills)
 
 ```ts
-import { BOM, RadarRegions } from "bom-weather";
+import { BOM, RadarRegions } from "bomweather";
 import { writeFileSync } from "fs";
 
 const radarImage = await BOM.getRadarImage(RadarRegions.NSW_SYDNEY_TERREY_HILLS);
@@ -80,6 +86,26 @@ The `RadarRegions` enum includes comprehensive coverage of all BOM radar station
 All radar codes use state prefixes (e.g., `NSW_`, `VIC_`, `QLD_`) for clarity and easy discovery.
 
 **Note**: Legacy radar names from earlier versions have been removed as they contained incorrect radar codes. Please update your code to use the new state-prefixed names with verified codes.
+
+## Publishing
+
+This package is automatically published to npm when changes are pushed to the `main` branch. The CI/CD workflow:
+
+1. Runs linting checks
+2. Runs tests across Node.js versions 18, 20, and 22
+3. Builds the package and validates the output
+4. Tests package installation
+5. Reads the version from `package.json`
+6. Creates a Git tag (e.g., `v1.1.9`) and GitHub release
+7. Publishes to npmjs with provenance using OIDC authentication
+
+To publish a new version:
+
+1. Update the version in `package.json` (e.g., `1.1.9` → `1.2.0`)
+2. Commit and push to `main` branch
+3. The workflow will automatically lint, test, build, tag, release, and publish
+
+**Note**: The workflow uses OpenID Connect (OIDC) for authentication with npm, which is more secure than using long-lived tokens. No npm token secret is required - authentication is handled automatically through GitHub's OIDC provider.
 
 ## Disclaimer
 
