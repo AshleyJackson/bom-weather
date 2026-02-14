@@ -12,7 +12,7 @@ export class BOMApiError extends Error {
 	}
 }
 
-/* eslint-disable @typescript-eslint/no-extraneous-class */
+ 
 export class Fetch {
 	private static rootAPI = 'https://api.weather.bom.gov.au/v1';
 
