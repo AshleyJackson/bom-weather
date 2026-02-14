@@ -94,7 +94,7 @@ jobs:
           mkdir test-install
           cd test-install
           npm init -y
-          npm install ../@ashleyjacksonnet/bomweather-*.tgz
+          npm install ../bomweather-*.tgz
           node -e "const pkg = require('@ashleyjacksonnet/bomweather'); if (!pkg.BOM) { console.error('Import test: FAIL'); process.exit(1); } console.log('Import test: PASS')"
 
       - name: Get version from package.json
