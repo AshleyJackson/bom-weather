@@ -91,10 +91,11 @@ jobs:
       - name: Test package installation
         run: |
           npm pack
+          TARBALL=$(ls bomweather-*.tgz)
           mkdir test-install
           cd test-install
           npm init -y
-          npm install ../bomweather-*.tgz
+          npm install ../$TARBALL
           node -e "const pkg = require('@ashleyjacksonnet/bomweather'); if (!pkg.BOM) { console.error('Import test: FAIL'); process.exit(1); } console.log('Import test: PASS')"
 
       - name: Get version from package.json
