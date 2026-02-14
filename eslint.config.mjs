@@ -44,8 +44,7 @@ export default [
 			'dist/**',
 			'node_modules/**',
 			'*.js',
-			'*.mjs',
-			'scripts/**/*.js',
+			'scripts/**/*.mjs',
 		],
 	},
 ];
