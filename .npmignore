@@ -1,6 +1,5 @@
 # Source files
 src/
-scripts/
 *.ts
 *.tsx
 !*.d.ts
@@ -10,7 +9,6 @@ tsconfig.json
 .eslintrc*
 .prettierrc*
 .editorconfig
-rollup.config.*
 
 # Build tools
 .github/
@@ -22,10 +20,7 @@ rollup.config.*
 node_modules/
 
 # Lock files
-package-lock.json
-yarn.lock
 bun.lock
-pnpm-lock.yaml
 
 # Tests and test data
 tests/
