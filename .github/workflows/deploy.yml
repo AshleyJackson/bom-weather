@@ -91,7 +91,7 @@ jobs:
       - name: Test package installation
         run: |
           npm pack
-          TARBALL=$(ls bomweather-*.tgz)
+          TARBALL=$(ls ashleyjacksonnet-bomweather-*.tgz)
           mkdir test-install
           cd test-install
           npm init -y
